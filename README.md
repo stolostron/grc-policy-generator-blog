@@ -1,2 +1,4 @@
-# grc-policy-generator-blog
-Contains sample Kustomize configuration for the Policy Generator blog post
+# Policy Generator Blog Resources
+
+This repository contains sample Kustomize configuration for the Policy Generator
+blog post.

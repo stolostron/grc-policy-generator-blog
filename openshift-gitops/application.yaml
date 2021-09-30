@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: policy-generator-blog
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: policy-generator-blog
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: kustomize
+    repoURL: https://github.com/open-cluster-management/grc-policy-generator-blog.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

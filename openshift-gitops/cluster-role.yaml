@@ -28,6 +28,21 @@ rules:
       - apps.open-cluster-management.io
     resources:
       - placementrules
+  - verbs:
+      - get
+      - list
+      - watch
+      - create
+      - update
+      - patch
+      - delete
+    apiGroups:
+      - cluster.open-cluster-management.io
+    resources:
+      - placements
+      - placements/status
+      - placementdecisions
+      - placementdecisions/status
 ---
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1

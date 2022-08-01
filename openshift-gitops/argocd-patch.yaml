@@ -10,11 +10,11 @@ spec:
       value: /etc/kustomize/plugin
     initContainers:
     - args:
+      - -c
       - cp /etc/kustomize/plugin/policy.open-cluster-management.io/v1/policygenerator/PolicyGenerator
         /policy-generator/PolicyGenerator
       command:
-      - sh
-      - -c
+      - /bin/bash
       image: registry.redhat.io/rhacm2/multicluster-operators-subscription-rhel8:v2.5
       name: policy-generator-install
       volumeMounts:

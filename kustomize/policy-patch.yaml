@@ -1,0 +1,7 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: Policy
+metadata:
+  name: policy-generator-blog-app
+  namespace: policy-generator-blog
+spec:
+  copyPolicyMetadata: false
